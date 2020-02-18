@@ -1,15 +1,11 @@
-function printMessage(msg){
-	let div = document.createElement('div');
-	div.innerHTML = msg;
-    document.getElementById('messages').appendChild(div);
-}
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
-}
+console.log('Gracz wpisał: ' + playerInput);
 
-let computerMove = `kamień`;
-function printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+let playerMove = 'nieznany ruch';
 
-let playerMove = `papier`;
-printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to nozyce, to wygrywasz!');
+if(playerInput == '1'){playerMove = 'kamień';}
+	else if (playerInput == '2'){playerMove = 'papier';}
+	else {playerMove = 'nozyce';}
+
+printMessage('Twój ruch to: ' + playerMove);
